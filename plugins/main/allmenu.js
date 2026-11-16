@@ -114,6 +114,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 │ • ${usedPrefix}toimg
 │ • ${usedPrefix}tomp3
 │ • ${usedPrefix}tovn
+│ • ${usedPrefix}wm
 ╰─────────────────╯
 
 ╭───〔 ✨ 𝗠𝗖𝗧𝗔𝗠𝗔 〕───╮
