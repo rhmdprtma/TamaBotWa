@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07111f">
+<title>TamaBotWa — Bot WhatsApp</title>
+<style>
+:root{--bg:#07111f;--panel:#101e30;--panel2:#14263b;--text:#edf5ff;--muted:#9bb0c8;--accent:#35d6b0;--line:rgba(255,255,255,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -10%,#174b53 0,transparent 45%),var(--bg);color:var(--text);font:15px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+.wrap{width:min(1080px,calc(100% - 32px));margin:auto}.hero{padding:22px 0 10px}.banner{width:100%;display:block;max-height:330px;object-fit:cover;border-radius:22px;border:1px solid var(--line);box-shadow:0 18px 55px #0008}
+.brand{text-align:center;padding:20px 8px 8px}.brand h1{margin:0;font-size:clamp(27px,5vw,42px);letter-spacing:.5px}.brand p{margin:4px 0;color:var(--muted)}.status{display:inline-flex;align-items:center;gap:8px;margin-top:10px;padding:6px 12px;border:1px solid #35d6b055;border-radius:30px;color:#8ff2d8;font-size:12px}.dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}
+section{margin:22px 0}.section-title{font-size:20px;margin:0 0 12px}.info{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.info-card,.menu-card{background:linear-gradient(145deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:16px;padding:16px}.info-card small{display:block;color:var(--muted);font-size:12px}.info-card strong{font-size:15px;overflow-wrap:anywhere}.links{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}.links a{color:var(--text);text-decoration:none;border:1px solid var(--line);padding:8px 12px;border-radius:10px;background:#ffffff08}.links a:hover{border-color:var(--accent);color:var(--accent)}
+.toolbar{display:flex;gap:10px;align-items:center;margin-bottom:14px}.search{flex:1;min-width:0;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:var(--text);font:inherit;outline:none}.search:focus{border-color:var(--accent)}.count{color:var(--muted);font-size:12px;white-space:nowrap}
+.menu-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.menu-card h3{margin:0 0 10px;font-size:16px;display:flex;align-items:center;gap:9px}.commands{display:flex;flex-wrap:wrap;gap:8px}.cmd{border:1px solid #ffffff14;background:#071321;color:#d8e8f8;border-radius:9px;padding:7px 10px;font:13px ui-monospace,SFMono-Regular,Consolas,monospace;cursor:pointer}.cmd:hover{border-color:var(--accent);color:#8ff2d8}.empty{display:none;color:var(--muted);padding:22px;text-align:center}
+footer{text-align:center;color:var(--muted);padding:30px 0 40px;font-size:13px}
+@media(max-width:650px){.info{grid-template-columns:1fr 1fr}.menu-grid{grid-template-columns:1fr}.banner{max-height:220px;border-radius:15px}.wrap{width:min(100% - 22px,1080px)}}
+@media(max-width:390px){.info{grid-template-columns:1fr}.toolbar{align-items:stretch;flex-direction:column}.count{padding-left:3px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<header class="hero">
+<img class="banner" src="media/banner-tamabotwa.png" alt="Banner TamaBotWa" onerror="this.style.display='none'">
+<div class="brand"><h1>TamaBotWa</h1><p>Asisten WhatsApp dengan banyak fitur untuk menemani aktivitasmu.</p><span class="status"><i class="dot"></i> BOT WHATSAPP · VERSION 3.00</span></div>
+</header>
+
+<section aria-labelledby="info-title">
+<h2 class="section-title" id="info-title">👤 Informasi Owner</h2>
+<div class="info">
+<div class="info-card"><small>Nama Owner</small><strong>RahmadPratama</strong></div>
+<div class="info-card"><small>WhatsApp</small><strong>+62 853-9365-9857</strong></div>
+<div class="info-card"><small>Prefix Bot</small><strong>. &nbsp; # &nbsp; ! &nbsp; /</strong></div>
+</div>
+<div class="links">
+<a href="https://wa.me/6285393659857" target="_blank" rel="noopener">WhatsApp Owner ↗</a>
+<a href="https://whatsapp.com/channel/0029Vb96v4e72WTsFquwB441" target="_blank" rel="noopener">Saluran MCTama ↗</a>
+<a href="https://t.me/mctamaaa" target="_blank" rel="noopener">Telegram ↗</a>
+<a href="https://chat.whatsapp.com/Eo8q0uI2Jku3kxk5WapwPu?s=cl&p=i&mlu=4&ilr=4&iam=2" target="_blank" rel="noopener">Grup WhatsApp ↗</a>
+</div>
+</section>
+
+<section aria-labelledby="menu-title">
+<h2 class="section-title" id="menu-title">🤖 Menu Bot</h2>
+<div class="toolbar"><input id="search" class="search" type="search" placeholder="Cari fitur atau command..." aria-label="Cari menu"><span class="count" id="count">0 fitur</span></div>
+<div class="menu-grid" id="menus">
+<div class="menu-card" data-category="AI"><h3>🤖 AI</h3><div class="commands">
+<button class="cmd">.bostama &lt;pertanyaan&gt;</button><button class="cmd">.claude &lt;pertanyaan&gt;</button><button class="cmd">.cloudflare &lt;pertanyaan&gt;</button><button class="cmd">.deepseek &lt;pertanyaan&gt;</button><button class="cmd">.feelbetter &lt;pesan&gt;</button><button class="cmd">.gemini &lt;pertanyaan&gt;</button><button class="cmd">.jokowi &lt;pertanyaan&gt;</button><button class="cmd">.nanobanana &lt;prompt&gt;</button><button class="cmd">.prabowo &lt;pertanyaan&gt;</button><button class="cmd">.promptgen &lt;teks&gt;</button></div></div>
+<div class="menu-card" data-category="BUGS"><h3>🐛 BUGS</h3><div class="commands"><button class="cmd">.blank &lt;nomor&gt;</button><button class="cmd">.delay &lt;nomor&gt;</button></div></div>
+<div class="menu-card" data-category="DOWNLOADER"><h3>📥 DOWNLOADER</h3><div class="commands"><button class="cmd">.aio &lt;link&gt;</button><button class="cmd">.capcut &lt;url&gt;</button><button class="cmd">.mediafire &lt;url&gt;</button><button class="cmd">.npmdl &lt;paket&gt;</button><button class="cmd">.pindl &lt;url&gt;</button><button class="cmd">.tiktok &lt;link&gt;</button></div></div>
+<div class="menu-card" data-category="FUN"><h3>🎉 FUN</h3><div class="commands"><button class="cmd">.animehot</button><button class="cmd">.cekgabut &lt;@tag&gt;</button><button class="cmd">.cekpsikopat</button><button class="cmd">.ceksisaumur &lt;@tag&gt;</button><button class="cmd">.cektinggi &lt;@tag&gt;</button><button class="cmd">.pap</button><button class="cmd">.tobrut</button></div></div>
+<div class="menu-card" data-category="GAME"><h3>🎮 GAME</h3><div class="commands"><button class="cmd">.daily</button><button class="cmd">.dompet</button><button class="cmd">.pesawat</button><button class="cmd">.slot</button><button class="cmd">.sonic</button><button class="cmd">.transfer</button></div></div>
+<div class="menu-card" data-category="GROUP"><h3>👥 GROUP</h3><div class="commands">
+<button class="cmd">.add</button><button class="cmd">.adminonly &lt;on/off&gt;</button><button class="cmd">.antibot &lt;on/off/kick&gt;</button><button class="cmd">.antidelete &lt;on/off&gt;</button><button class="cmd">.antijudol &lt;on/off/kick&gt;</button><button class="cmd">.antilink &lt;on/off&gt;</button><button class="cmd">.antispam &lt;on/off/kick&gt;</button><button class="cmd">.antiswgc &lt;on/off&gt;</button><button class="cmd">.antitagsw &lt;on/off&gt;</button><button class="cmd">.antiunadmin &lt;on/off&gt;</button><button class="cmd">.antivirtex &lt;on/off/kick&gt;</button><button class="cmd">.close</button><button class="cmd">.del</button><button class="cmd">.demote &lt;@tag&gt;</button><button class="cmd">.detect &lt;on/off&gt;</button><button class="cmd">.idgc</button><button class="cmd">.kick &lt;@tag&gt;</button><button class="cmd">.linkgc</button><button class="cmd">.open</button><button class="cmd">.pinpesan &lt;24j/7h/30h&gt;</button><button class="cmd">.promote &lt;@tag&gt;</button><button class="cmd">.tagal &lt;pesan&gt;</button><button class="cmd">.unpin</button><button class="cmd">.welcome &lt;on/off&gt;</button></div></div>
+<div class="menu-card" data-category="JPM"><h3>📣 JPM</h3><div class="commands"><button class="cmd">.jpmch &lt;teks&gt;</button><button class="cmd">.stopjpmch</button></div></div>
+<div class="menu-card" data-category="MAIN"><h3>📌 MAIN</h3><div class="commands"><button class="cmd">.allmenu</button><button class="cmd">.donasi</button><button class="cmd">.donate</button><button class="cmd">.ping</button><button class="cmd">.sc</button></div></div>
+<div class="menu-card" data-category="MAKER"><h3>🎨 MAKER</h3><div class="commands"><button class="cmd">.brat &lt;teks&gt;</button><button class="cmd">.bratvid &lt;teks&gt;</button><button class="cmd">.bratvid2 &lt;teks&gt;</button><button class="cmd">.iqc &lt;teks&gt;</button><button class="cmd">.jadianime</button><button class="cmd">.jadihitam</button><button class="cmd">.photolive</button><button class="cmd">.sticker</button><button class="cmd">.toimg</button><button class="cmd">.tomp3</button><button class="cmd">.tovn</button></div></div>
+<div class="menu-card" data-category="MCTAMA"><h3>✨ MCTAMA</h3><div class="commands"><button class="cmd">.absen</button><button class="cmd">.afk</button><button class="cmd">.jodoh</button><button class="cmd">.khodam</button><button class="cmd">.menfes</button><button class="cmd">.reminder</button><button class="cmd">.stopmenfes</button></div></div>
+<div class="menu-card" data-category="OWNER"><h3>👑 OWNER</h3><div class="commands"><button class="cmd">.addowner &lt;nomor&gt;</button><button class="cmd">.addplugin &lt;nama&gt;</button><button class="cmd">.addprem &lt;nomor&gt;</button><button class="cmd">.backup</button><button class="cmd">.blacklist &lt;nomor&gt;</button><button class="cmd">.delplugin &lt;nama&gt;</button><button class="cmd">.getplugin &lt;nama&gt;</button><button class="cmd">.listplugin</button><button class="cmd">.public</button><button class="cmd">.self</button><button class="cmd">.swgc &lt;teks&gt;</button></div></div>
+<div class="menu-card" data-category="SEARCH"><h3>🔍 SEARCH</h3><div class="commands"><button class="cmd">.kodepos &lt;kota&gt;</button><button class="cmd">.play &lt;judul&gt;</button></div></div>
+<div class="menu-card" data-category="TOOLS"><h3>🛠️ TOOLS</h3><div class="commands"><button class="cmd">.cekgempa</button><button class="cmd">.cekidch &lt;link&gt;</button><button class="cmd">.cekmail &lt;email&gt;</button><button class="cmd">.get &lt;url&gt;</button><button class="cmd">.kalkulator &lt;soal&gt;</button><button class="cmd">.pesanmail &lt;id&gt;</button><button class="cmd">.rch &lt;link_channel&gt; &lt;emoji&gt;</button><button class="cmd">.rvo</button><button class="cmd">.ssweb &lt;link&gt;</button><button class="cmd">.tempmail</button><button class="cmd">.tobotak</button><button class="cmd">.tourl</button></div></div>
+</div><p class="empty" id="empty">Menu tidak ditemukan.</p>
+</section>
+<footer>© <span id="year"></span> TamaBotWa · Dibuat untuk komunitas MCTama<br>Klik command untuk menyalinnya.</footer>
+</main>
+<script>
+const search=document.getElementById('search'), cards=[...document.querySelectorAll('.menu-card')], count=document.getElementById('count'), empty=document.getElementById('empty');
+function filter(){const q=search.value.trim().toLowerCase();let visible=0,total=0;cards.forEach(card=>{let n=0;card.querySelectorAll('.cmd').forEach(btn=>{const show=btn.textContent.toLowerCase().includes(q)||card.dataset.category.toLowerCase().includes(q);btn.hidden=!show;if(show)n++});card.hidden=n===0;visible+=n;if(n)total++});count.textContent=visible+' fitur · '+total+' kategori';empty.style.display=total?'none':'block'}
+search.addEventListener('input',filter);document.getElementById('year').textContent=new Date().getFullYear();filter();
+document.querySelectorAll('.cmd').forEach(btn=>btn.addEventListener('click',async()=>{const original=btn.textContent;const value=original.replaceAll('&lt;','<').replaceAll('&gt;','>');try{await navigator.clipboard.writeText(value);btn.textContent='✓ Tersalin';setTimeout(()=>btn.textContent=original,1100)}catch{btn.textContent=original}}));
+</script>
+</body></html>
