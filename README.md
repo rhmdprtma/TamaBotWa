@@ -160,7 +160,7 @@ Kamu dapat mengatur konfigurasi sesuai struktur dan fitur yang tersedia di dalam
 
 **Created with passion & creativity.**
 
-[![GitHub](https://img.shields.io/badge/GitHub-tamayana-181717?style=for-the-badge&logo=github)](https://github.com/tamayana)
+[![GitHub](https://img.shields.io/badge/GitHub-tamayana-181717?style=for-the-badge&logo=github)](https://github.com/rhmdprtma)
 
 **TamaBotWa — Smart WhatsApp Automation.**
 
